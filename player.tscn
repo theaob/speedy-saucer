@@ -16,3 +16,8 @@ texture = ExtResource("1_37u38")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 z_index = -1
 shape = SubResource("CircleShape2D_ly6k7")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position_smoothing_speed = 1.0
+drag_horizontal_enabled = true
+drag_vertical_enabled = true
