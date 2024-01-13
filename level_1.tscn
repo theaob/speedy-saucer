@@ -1,15 +1,18 @@
-[gd_scene load_steps=3 format=3 uid="uid://ucyj2ft0itta"]
+[gd_scene load_steps=4 format=3 uid="uid://ucyj2ft0itta"]
 
 [ext_resource type="Texture2D" uid="uid://cnandqxrtpbfm" path="res://Assets/purple.png" id="1_58854"]
+[ext_resource type="Script" path="res://level_1.gd" id="1_vs8fb"]
 [ext_resource type="PackedScene" uid="uid://b0efpaub1d1fd" path="res://player.tscn" id="2_2begs"]
 
 [node name="Level1" type="Node2D"]
+script = ExtResource("1_vs8fb")
 
 [node name="Background" type="TextureRect" parent="."]
+z_index = -100
 offset_right = 1152.0
 offset_bottom = 648.0
 texture = ExtResource("1_58854")
 stretch_mode = 1
 
 [node name="Player" parent="." instance=ExtResource("2_2begs")]
-position = Vector2(48, 49)
+position = Vector2(549, 296)
