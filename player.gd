@@ -1,6 +1,6 @@
 extends RigidBody2D
 	
-var movement_speed = 1000
+const MOVEMENT_SPEED = 1000
 	
 func _physics_process(_delta):
 	var upPressed = Input.is_action_pressed("move_up")
@@ -11,9 +11,9 @@ func _physics_process(_delta):
 	var yForce = 0
 	var xForce = 0
 	
-	if upPressed: yForce += -movement_speed
-	if downPressed: yForce += movement_speed
-	if leftPressed: xForce += -movement_speed
-	if rightPressed: xForce += movement_speed
+	if upPressed: yForce += -MOVEMENT_SPEED
+	if downPressed: yForce += MOVEMENT_SPEED
+	if leftPressed: xForce += -MOVEMENT_SPEED
+	if rightPressed: xForce += MOVEMENT_SPEED
 		
 	apply_force(Vector2(xForce, yForce))
