@@ -6,5 +6,5 @@ func _ready():
 
 func _on_maze_body_exited(_body):
 	print("Body exited. Reloading scene...")
-	get_tree().reload_current_scene()
+	get_tree().call_deferred("reload_current_scene")
 	pass # Replace with function body.
